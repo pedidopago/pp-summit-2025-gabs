@@ -56,31 +56,23 @@ Com o objetivo inicial de agilizar o atendimento via WhatsApp;
 
 <v-clicks depth="2">
 
-- ⏲ Ajustes de Escalabilidade
-  - 10x volume de 2024
-  - 10k updates/minuto de contatos
-  - Filtro/busca de contatos responder em menos de 100ms
 - Drivers alternativos ao WhatsApp
   - Maniback
   - E-Mail
   - Telegram
+- Conversões automáticas de mensagem
+  - De marketing para mensagem interativa
+  - Redução de custos
+- ⏲ Ajustes de Escalabilidade
+  - 10x volume de 2024
+  - 10k updates/minuto de contatos
+  - Filtro/busca de contatos responder em menos de 100ms
 
 </v-clicks>
 
 <!--
 Desde 2022 até o momento, trabalhamos em diversas melhorias para o nosso módulo de
 mensageria para a Pedido Pago; Sendo assim, listamos aqui os principais tópicos;
-
-O volume de mensagens, usuários ativos (colaboradores) aumentou mais que 10x desde o último ano; Sendo assim, passamos por várias iterações de performance ao longo desses 3 anos;
-
-Curiosidade: no horário entre 9 - 12h, cerca de 10 mil atualizações de contato são feitas por minuto;
-
-Por que isso é um desafio? Pois as atualizações, sejam em dados de orçamento - status - numero de pedido, vendedor atribuído, data de sincronização com o ERP; Boa parte dessas atualizações precisam ser buscáveis, em tempo real, o tempo todo;
-
-Sendo assim, essas 10k atualizações por minuto precisam ser consumidas e enviadas p/ o banco de dados responsável pela busca desses dados, para que ele consiga responder a uma busca (com diversos filtros) em menos de 100ms;
-
-Update de contato -> fila de contatos a serem indexados -> deduplicar eventos com o mesmo contato -> atualizações em massa (100 a 200 por update);
-Escalabilidade automática -> se o backlog dessa fila de atualizações cresce mais rapido do que está sendo consumida, novos workers são criados para consumir ainda mais contatos em paralelo; (e com isso tem o desafio dos workers não trabalhar com os mesmos contatos ((lock)))
 
 -
 
@@ -92,6 +84,29 @@ O maniback, sendo um app desenvolvido pela Pedido Pago, foi o primeiro benefici�
 Driver email (Google, Microsoft e outros via SMTP + IMAP)
 Driver telegram
 (por enquanto)
+
+--
+
+Uma melhoria importante também foi a conversão automática de mensagens,
+principalmente mensagens de marketing, que viram mensagens interativas quando existe
+uma janela aberta com o cliente, aquela janela de serviço que começa quando o cliente
+envia uma mensagem para a empresa.
+
+Isto ajuda bastante na redução de custos, já que uma mensagem de marketing
+custa em média 35 centavos para a empresa.
+
+--
+
+O volume de mensagens, usuários ativos (colaboradores) aumentou mais que 10x desde o último ano; Sendo assim, passamos por várias iterações de performance ao longo desses 3 anos;
+
+Curiosidade: no horário entre 9 - 12h, cerca de 10 mil atualizações de contato são feitas por minuto;
+
+Por que isso é um desafio? Pois as atualizações, sejam em dados de orçamento - status - numero de pedido, vendedor atribuído, data de sincronização com o ERP; Boa parte dessas atualizações precisam ser buscáveis, em tempo real, o tempo todo;
+
+Sendo assim, essas 10k atualizações por minuto precisam ser consumidas e enviadas p/ o banco de dados responsável pela busca desses dados, para que ele consiga responder a uma busca (com diversos filtros) em menos de 100ms;
+
+Update de contato -> fila de contatos a serem indexados -> deduplicar eventos com o mesmo contato -> atualizações em massa (100 a 200 por update);
+Escalabilidade automática -> se o backlog dessa fila de atualizações cresce mais rapido do que está sendo consumida, novos workers são criados para consumir ainda mais contatos em paralelo; (e com isso tem o desafio dos workers não trabalhar com os mesmos contatos ((lock)))
 -->
 
 ---
@@ -282,6 +297,11 @@ Exemplo de histórico de chamadas, onde será possível escutar, ver transcriç�
 layout: image-right
 image: '/temp_calls_business_initiated_history_actions.png'
 ---
+
+# Ações no histórico de ligações
+
+* Transcrição completa;
+* Deep link para a ligação na thread do contato;
 
 <!--
 Em uma ligação com o cliente, já que a Pedido Pago faz a ponte entre o atendente e o cliente (tecnicamente o cliente FB está com uma conexão com a PP, e a PP está com uma conexão com o atendente) existe essa ilusão de estarem compartilhando a mesma conexão, mas o que acontece é que o servidor (no caso a Pedido Pago) retransmite (e mixa) os audios do cliente p/ atendente (e vice versa)
