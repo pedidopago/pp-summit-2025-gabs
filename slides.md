@@ -77,7 +77,8 @@ mensageria para a Pedido Pago; Sendo assim, listamos aqui os principais tópicos
 -
 
 drivers alternativos ao whatsapp
-(o WhatsApp ser o canal de atendimento com o maior volume de pessoas, mas não é o único canal que os clientes utilizam)
+
+Apesar do WhatsApp ser o canal de atendimento com o maior volume de pessoas, mas não é o único canal que os clientes utilizam)
 (por este motivo e outros fatores (custo por mensagem; clientes de diferentes localidades tendo um nicho diferente de mensageria) fizemos uma grande mudança no Wabaman p/ ser um centralizador de canais de atendimento, e o primeiro canal ficou com o WhatsApp Business)
 Driver Maniback
 O maniback, sendo um app desenvolvido pela Pedido Pago, foi o primeiro beneficiário desta mudança; Se o cliente já tem o maniback instalado no celular, damos preferência a enviar mensagens via app maniback (custo)
@@ -159,6 +160,13 @@ layout: image
 image: '/temp_fullimg_calls_business_initiated_2.png'
 ---
 
+<!--
+Neste slide temos aí no topo o botão de pedir autorização para o cliente.
+
+Este aqui é um exemplo deste fluxo de interação com o cliente via ligação;
+* clicar em botão "solicitar permissão";
+-->
+
 ---
 layout: image-right
 image: '/temp_fullimg_calls_business_initiated_popup.png'
@@ -169,19 +177,20 @@ image: '/temp_fullimg_calls_business_initiated_popup.png'
 
 <v-clicks>
 
-* Modelo de mensagem é enviado para o cliente;
-* O cliente tem a opção de aceitar ou recusar;
+* Modelo é enviado para o cliente;
+* Ele tem a opção de aceitar ou recusar;
 * O atendente é notificado após a confirmação;
 
 </v-clicks>
 
 <!--
-Este aqui é um exemplo deste fluxo de interação com o cliente via ligação;
-* clicar em botão "solicitar permissão";
 * template é enviado p/ o cliente (dois botões - aceitar e recusar);
+* o cliente irá responder a esta mensagem (ou não, acontece)
 * ao receber a confirmação positiva do meta, já iniciamos uma ligação;
 
-como esse processo é async; pode ser que o cliente demore a clicar no botão de aceitar, e o atendente pode estar em outra tela, outro cliente; neste caso recomendo mostrar um aviso pro atendente resumir esta operação, pra voltar pro contato anterior
+como esse processo é async; pode ser que o cliente demore a clicar no botão de aceitar, e o atendente pode estar em outra tela, com outro cliente; 
+
+() neste caso recomendo mostrar um aviso pro atendente resumir esta operação, pra voltar pro contato anterior
 -->
 
 ---
@@ -220,7 +229,7 @@ image: '/temp_fullimg_calls_business_initiated_7.png'
 ---
 
 <!--
-E neste slide podemos ver, no filtro de ligações em adamento, a ligação iniciada pelo Luis
+E neste slide podemos ver que o cliente atendeu a ligação, e tabém no filtro de ligações em adamento, podemos ver na coluna da esquerda a ligação iniciada pelo Luis
 -->
 
 ---
@@ -252,7 +261,7 @@ image: '/temp_calls_business_initiated_invite_request_modal.png'
 <!--
 Este é o modal que o colaborador recebe após o atendente clicar no botão de convidar;
 
-Isto ébastante útil no caso de precisar envolver algum especialista neste atendimento e isto ficar transparente p/ o cliente já que estão todos na mesma linha;
+Isto é bastante útil no caso de precisar envolver algum especialista neste atendimento e isto traz uma transparência p/ o cliente já que estão todos na mesma linha;
 -->
 
 ---
