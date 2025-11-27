@@ -419,3 +419,36 @@ layout: fact
 
 # 100%
 BSP Disparalha
+
+<!--
+Estes dois requerimentos são cobertos para quem tem o a integração via o nosso BSP Disparalha
+-->
+
+---
+
+# Integrações Futuras
+
+* Sistemas Tradicionais de Telefonia
+* "URA" ou Pré-atendimento
+* API para integração via WebRTC
+
+<!--
+Já estamos em conversas para integrar a telefonia via WhatsApp
+com sistemas tradicionais de telefonia (SIP, VoIP, etc)
+
+Qual o motivo? O motivo é que, no sistema de telefonia geralmente é feito uma distribuição
+automática de chamadas, e com a integração será possível aproveitar essa funcionalidade
+já existente.
+
+A URA pode ser desde uma mensagem automática (para clientes que ligam fora do horário de atendimento)
+até funcionalidades básicas de atendimento.
+
+E por último, temos o objetivo de, assim como fizemos para os ERPs, ter uma API pública
+que permita que outros parceiros façam uma integração específica já com essa API que estará disponível.
+-->
+
+---
+layout: statement
+---
+
+# Fim
