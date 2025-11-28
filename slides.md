@@ -36,8 +36,8 @@ Módulo de mensageria da Pedido Pago
 
 <!--
 Desde o início com a API oficial do WhatsApp Business;
-Com o objetivo inicial de agilizar o atendimento via WhatsApp;
-
+Com o objetivo inicial de agilizar o atendimento via WhatsApp trazendo funcionalidades básicas de chatbot
+e atendimento com múltiplos atendentes;
  -->
 
 ---
@@ -78,11 +78,20 @@ mensageria para a Pedido Pago; Sendo assim, listamos aqui os principais tópicos
 
 drivers alternativos ao whatsapp
 
-Apesar do WhatsApp ser o canal de atendimento com o maior volume de pessoas, mas não é o único canal que os clientes utilizam)
-(por este motivo e outros fatores (custo por mensagem; clientes de diferentes localidades tendo um nicho diferente de mensageria) fizemos uma grande mudança no Wabaman p/ ser um centralizador de canais de atendimento, e o primeiro canal ficou com o WhatsApp Business)
+Apesar do WhatsApp ser o canal de atendimento com o maior volume de pessoas, ele não é o único canal que os clientes utilizam;
+
+e por este motivo e outros fatores, como custo por mensagem, clientes de diferentes localidades tendo um nicho diferente de mensageria, fizemos
+uma grande mudança na mensageria para ser um centralizador de canais de atendimento, e o primeiro canal ficou com o WhatsApp Business;
+antes a mensageria era uma coisa só do WhatsApp, foi refatorada para que o WhatsApp fosse apenas um módulo (ou canal), dentre outros como:
+
 Driver Maniback
-O maniback, sendo um app desenvolvido pela Pedido Pago, foi o primeiro beneficiário desta mudança; Se o cliente já tem o maniback instalado no celular, damos preferência a enviar mensagens via app maniback (custo)
-Driver email (Google, Microsoft e outros via SMTP + IMAP)
+
+O maniback, sendo um app desenvolvido pela Pedido Pago, o nosso app de cashback, foi o primeiro beneficiário desta mudança; Se o cliente já tem o 
+maniback instalado no celular, damos preferência a enviar mensagens via este app maniback, pois o custo muito menor que o do WhatsApp;
+
+Driver email
+Integramos Google, Microsoft e outros via SMTP e IMAP
+
 Driver telegram
 (por enquanto)
 
@@ -229,7 +238,7 @@ image: '/temp_fullimg_calls_business_initiated_7.png'
 ---
 
 <!--
-E neste slide podemos ver que o cliente atendeu a ligação, e tabém no filtro de ligações em adamento, podemos ver na coluna da esquerda a ligação iniciada pelo Luis
+E neste slide podemos ver que o cliente atendeu a ligação, e também no filtro de ligações em adamento, podemos ver na coluna da esquerda a ligação iniciada pelo Luis
 -->
 
 ---
